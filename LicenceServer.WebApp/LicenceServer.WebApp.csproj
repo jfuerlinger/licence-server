@@ -4,6 +4,21 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LicenceManager.Core\LicenceManager.Core.csproj" />
+    <ProjectReference Include="..\LicenceManager.Persistence\LicenceManager.Persistence.csproj" />
+  </ItemGroup>
+
 
 
 </Project>
